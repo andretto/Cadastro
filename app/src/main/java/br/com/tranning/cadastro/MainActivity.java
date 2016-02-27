@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("idade", idade);
                 intent.putExtra("telefone", telefone);
                 startActivity(intent);
+                finish();
             }
         });
         Log.i(TAG, "OnCreate");

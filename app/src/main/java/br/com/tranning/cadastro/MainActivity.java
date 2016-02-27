@@ -8,15 +8,29 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    // Variaveis Locais
+    EditText editTextNome;
+    EditText editTextextIdade;
+    EditText editTextTElefone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        editTextNome = (EditText) findViewById(R.id.TextViewNome);
+        editTextextIdade = (EditText) findViewById(R.id.TextViewIdade);
+        editTextTElefone = (EditText) findViewById(R.id.TextViewTelefone);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

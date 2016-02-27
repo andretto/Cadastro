@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Nome"
-        android:id="@+id/textView"
+        android:id="@+id/TextViewNome"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView"
+        android:id="@+id/editTextNome"
+        android:layout_below="@+id/TextViewNome"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -35,15 +35,15 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Idade"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editText"
+        android:id="@+id/TextViewIdade"
+        android:layout_below="@+id/editTextNome"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/TextViewIdade"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Telefone"
-        android:id="@+id/textView3"
+        android:id="@+id/TextViewTelefone"
         android:layout_below="@+id/editText2"
         android:layout_alignParentStart="true" />
 
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText3"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/TextViewTelefone"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 

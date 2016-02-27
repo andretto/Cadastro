@@ -1,5 +1,6 @@
 package br.com.tranning.cadastro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,20 +28,28 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        editTextNome = (EditText) findViewById(R.id.TextViewNome);
-        editTextextIdade = (EditText) findViewById(R.id.TextViewIdade);
-        editTextTElefone = (EditText) findViewById(R.id.TextViewTelefone);
+        editTextNome = (EditText) findViewById(R.id.editTextNome);
+        editTextextIdade = (EditText) findViewById(R.id.editTextIdade);
+        editTextTElefone = (EditText) findViewById(R.id.editTextTelefone);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                String nome = editTextNome.getText().toString();
+                String idade = editTextextIdade.getText().toString();
+                String telefone = editTextTElefone.getText().toString();
+                Intent intent = new Intent(MainActivity.this,Tela2Activity.class);
+                intent.putExtra("nome", nome);
+                intent.putExtra("idade", idade);
+                intent.putExtra("telefone", telefone);
+                startActivity(intent);
             }
         });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

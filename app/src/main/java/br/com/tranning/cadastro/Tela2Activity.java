@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ public class Tela2Activity extends AppCompatActivity {
     TextView textViewNome;
     TextView textViewIdade;
     TextView textViewTelefone;
+    final String TAG="Tela2Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,43 @@ public class Tela2Activity extends AppCompatActivity {
         textViewIdade.setText(idade);
         textViewTelefone.setText(telefone);
 
+        Log.i(TAG, "OnCreate");
 
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(TAG,"OnStart");
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG,"OnResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG,"OnPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG,"OnStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"OnDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(TAG,"OnRestart");
     }
 
 }
